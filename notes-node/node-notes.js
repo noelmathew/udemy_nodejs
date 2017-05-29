@@ -1,9 +1,15 @@
-console.log("Node-notes requiired");
+console.log("Node-notes required");
 
-module.exports.addNote = function(){
-	return 'Note added succesfully.';
-}
 
-module.exports.add = (a,b) => {
-	return a+b;
+var addNote = (title, body) => {
+	console.log('Adding note', title, body);
+};
+
+var getAll = () => {
+	console.log("Getting all notes");
+};
+
+module.exports = {
+	addNote, // is same as addNote: addNote
+	getAll
 }

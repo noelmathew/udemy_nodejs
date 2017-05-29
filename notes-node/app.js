@@ -1,27 +1,24 @@
 console.log('Starting app...');
 
 const fs = require('fs');
-const os = require('os');
 const _ = require('lodash');
+const yargs = require('yargs');
 
-var mynote = require('./node-notes.js');
+const notes = require('./node-notes.js');
 
-var array = ['Hello','Noel',1, 'Noel', '1', 'Hello'];
+const argv = yargs.argv;
 
-console.log(_.uniq(array));
+var command = argv._[0];
 
-// console.log(mynote.add(9,-2));
-
-
-
-// var user= os.userInfo();
-
-// fs.appendFile('Greetings.txt',`Hello ${user.username}!!`);
-
-/*fs.appendFile('Greetings.txt','Hello again!!',function(err){
-	if(err){
-		console.log("Could not append");
-	}
-});
-
-fs.appendFileSync('Greetings.txt', 'Hello again the third time');*/
+if(command === 'add'){
+	notes.addNote(argv.title, argv.body);
+}
+else if(command == 'list'){
+	notes.getAll();
+}
+else if(command === 'remove'){
+	console.log("Remove note");
+}
+else{
+	console.log('Invalid input');
+}

@@ -1,5 +1,5 @@
 {
-  "name": "notes-node",
+  "name": "weather-app",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,7 +9,6 @@
   "author": "NM",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.4",
-    "yargs": "^4.7.1"
+    "request": "^2.73.0"
   }
 }
