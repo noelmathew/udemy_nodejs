@@ -1,16 +1,15 @@
 {
-  "name": "weather-app",
+  "name": "node-web-server",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "NM",
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.13.1",
-    "request": "^2.73.0",
-    "yargs": "^4.8.1"
+    "express": "^4.0.0",
+    "hbs": "^4.0.0"
   }
 }
